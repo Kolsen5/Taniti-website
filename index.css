@@ -12,3 +12,6 @@ h1 {
   background-image: linear-gradient(Blue,Green,Yellow);
   font-weight: bold;
   }
+body {
+  background-image: Black;
+}
