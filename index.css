@@ -15,24 +15,39 @@ h1 {
 body {
   background-color: Black;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.topnav {
+  position: relative;
   overflow: hidden;
-  background-color: #333333;
+  background-color: #333;
 }
 
-ul li a {
-  display: block;
-  color: white;
+.topnav a {
+  float: left;
+  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
 }
-ul li {
-  float:left;
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 ul li a:hover {
   background-color: #111111;
