@@ -31,11 +31,7 @@ ul li a {
   text-decoration: none;
 }
 ul li {
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  float: left;
 }
 
 ul li a:hover {
