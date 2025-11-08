@@ -31,7 +31,7 @@ ul li a {
   text-decoration: none;
 }
 ul li {
-  float: left;
+  float:left;
 }
 
 ul li a:hover {
