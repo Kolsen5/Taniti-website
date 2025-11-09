@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - Taniti</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .results { 
+      text-align: center;
+      color: white;
+      margin-top: 30px;
+    }
+    .result-item {
+      margin: 10px;
+      background-color: #222;
+      padding: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      width: 300px;
+    }
+    .result-item a {
+      color: #04AA6D;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .result-item a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Results</h1>
+
+  <div class="results" id="resultsContainer">
+    <!-- Results will appear here -->
+  </div>
+
+  <script>
+    // Get search query from URL
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q")?.toLowerCase();
+
+    const pages = [
+      { name: "Transportation", url: "transportation.html", keywords: ["bus", "airport", "car", "taxi", "ferry"] },
+      { name: "Lodgings", url: "lodgings.html", keywords: ["hotel", "resort", "room", "stay"] },
+      { name: "Grocery Stores", url: "grocery-stores.html", keywords: ["market", "food", "store"] },
+      { name: "Restaurants", url: "restaurants.html", keywords: ["food", "dining", "meal", "restaurant"] },
+      { name: "Entertainment", url: "entertainment.html", keywords: ["shows", "music", "movies", "fun", "nightlife"] },
+      { name: "FAQ", url: "faq.html", keywords: ["questions", "help", "info", "faq"] },
+    ];
+
+    const container = document.getElementById("resultsContainer");
+
+    if (query) {
+      const results = pages.filter(page =>
+        page.name.toLowerCase().includes(query) ||
+        page.keywords.some(k => k.includes(query))
+      );
+
+      if (results.length > 0) {
+        container.innerHTML = results.map(r =>
+          `<div class="result-item">
+            <h2>${r.name}</h2>
+            <p><a href="${r.url}">Visit ${r.name}</a></p>
+          </div>`
+        ).join("");
+      } else {
+        container.innerHTML = `<p>No results found for "<strong>${query}</strong>". Try another search.</p>`;
+      }
+    } else {
+      container.innerHTML = "<p>Please enter a search term.</p>";
+    }
+  </script>
+</body>
+</html>
