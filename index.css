@@ -58,3 +58,39 @@ h1 {
     border-top: 1px solid #444;
   }
 }
+
+.search-bar {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-bar input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #04AA6D;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-bar input[type="text"]:focus {
+  border-color: #00cc88;
+  box-shadow: 0 0 8px #00cc88;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #038e5c;
+}
