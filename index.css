@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("images/bora-bora-3023437_1280.jpg");
+  background-image: url("../../Downloads/bora-bora-3023437_1280.jpg");
   background-repeat: no-repeat;
   background-size: 2560px 1440px;
   text-align: center;
@@ -25,7 +25,8 @@ h1 {
   font-size: 48px;
   background-color: black;
   font-weight: bold;
-  padding: 20px 0;
+  margin: 0;
+  padding: 0;
 }
 
 .topnav {
@@ -38,6 +39,9 @@ h1 {
   padding: 10px 20px;
   position: relative;
   top: 0;
+  margin: 0;
+  padding: 0;
+
 }
 
 .topnav a {
