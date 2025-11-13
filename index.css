@@ -5,7 +5,9 @@
 }
 
 body {
-  background-color: black;
+  background-image: url("../../Downloads/bora-bora-3023437_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: 2560px 1440px;
   text-align: center;
 }
 p {
@@ -21,7 +23,7 @@ h1 {
   color: black;
   text-shadow: 0 0 15px #FFFFFF, 0 0 5px #ffffff;
   font-size: 48px;
-  background-image: linear-gradient(Blue, Green, Yellow);
+  background-color: black;
   font-weight: bold;
   padding: 20px 0;
 }
@@ -107,4 +109,17 @@ h1 {
   align-items: center; 
   text-align: left; 
 
+}
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: -950px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
 }
