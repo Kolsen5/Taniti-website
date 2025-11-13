@@ -10,6 +10,8 @@ body.home {
   background-size: 2560px 1440px;
   text-align: center;
 
+body{
+	background-color: black;
 
 }
 p {
