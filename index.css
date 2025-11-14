@@ -10,6 +10,13 @@ body.home {
   background-size: 2560px 1440px;
   text-align: center;
 
+body.restaurants {
+	background-image: url("images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-size: 2500px 1440px;
+	text-align: center;
+}
+
 body{
 	background-color: black;
 
