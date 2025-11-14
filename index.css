@@ -181,10 +181,13 @@ h1 {
     font-size: 18px;
   }
 
-.text-block.home {
-  padding: 12px 15px;
-  font-size: 16px;
-}
+  .text-block.home {
+    position: relative;
+    transform: none;
+    width: 90%;
+    margin: 20px auto; /* spacing from nav */
+    border-radius: 10px; /* optional, match other text blocks */
+  }
 .search-bar input[type="text"] {
  width: 90%;
   }
