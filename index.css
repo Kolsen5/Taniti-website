@@ -3,6 +3,7 @@
   font-family: "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body.home {
@@ -133,9 +134,12 @@ h1 {
   position: relative;
   flex-wrap: wrap;
   text-align: center;
+  width: 90%;           
+  max-width: 1200px;    
+  margin: 0 auto;       
 }
 
-/* Default text block (all pages except homepage) */
+
 .text-block {
   background-color: black;
   color: white;
@@ -147,20 +151,18 @@ h1 {
   position: relative;
 }
 
-/* Homepage bottom fixed text block */
 .text-block.home {
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 95%;                       
   max-width: 1200px;
-  background-color: black;
+  background-color: rgba(0,0,0,0.92); 
   color: white;
   padding: 15px 20px;
   text-align: center;
   z-index: 9999;
-  opacity: 0.92;
   border-radius: 0;
 }
 
@@ -179,8 +181,11 @@ h1 {
     font-size: 18px;
   }
 
-  .text-block.home {
-    padding: 12px 15px;
-    font-size: 16px;
+.text-block.home {
+  padding: 12px 15px;
+  font-size: 16px;
+}
+.search-bar input[type="text"] {
+ width: 90%;
   }
 }
