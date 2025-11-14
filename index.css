@@ -148,13 +148,14 @@ h1 {
 .text-block.home {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
   background-color: black;
   color: white;
   padding: 20px;
-  text-align: center;
+  text-align: center; 
   z-index: 9999;
   opacity: 0.92;
-  border-radius: 0;
 }
