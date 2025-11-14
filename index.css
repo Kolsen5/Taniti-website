@@ -7,29 +7,32 @@
 body.home {
   background-image: url("images/bora-bora-3023437_1280.jpg");
   background-repeat: no-repeat;
-  background-size: 2560px 1440px;
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  padding-bottom: 120px; /* makes room for the fixed text block */
 }
 
 body.restaurants {
-	background-image: url("images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg");
-	background-repeat: no-repeat;
-	background-size: 2500px 1440px;
-	text-align: center;
+  background-image: url("images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 }
 
-body{
-	background-color: black;
-	text-align: center;
-
+body {
+  background-color: black;
+  text-align: center;
 }
+
 p {
-	text-align: left;
-	color: white;
-	font-size: 36px;
-	right-margin: 20px;
-	left-margin: 20px;
-	padding-left: 20px;
+  text-align: left;
+  color: white;
+  font-size: 36px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
 h1 {
@@ -40,22 +43,18 @@ h1 {
   font-weight: bold;
   margin: 0;
   padding: 0;
-  text-align: center
+  text-align: center;
 }
+
 
 .topnav {
   background-color: #333;
-  display: flex;    
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin: 10px auto;
-  padding: 10px 20px;
-  position: relative;
-  top: 0;
   margin: 0;
   padding: 0;
-
 }
 
 .topnav a {
@@ -66,6 +65,7 @@ h1 {
   font-size: 18px;
   transition: background-color 0.3s, color 0.3s;
 }
+
 .topnav a:hover {
   background-color: #ddd;
   color: black;
@@ -75,6 +75,8 @@ h1 {
   background-color: #04AA6D;
   color: white;
 }
+
+/* Mobile nav */
 @media screen and (max-width: 600px) {
   .topnav {
     flex-direction: column;
@@ -121,23 +123,39 @@ h1 {
 .search-bar button:hover {
   background-color: #038e5c;
 }
+
+
 .container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  text-align: left; 
-
-}
-.container {
+  justify-content: center;
+  align-items: center;
+  text-align: left;
   position: relative;
   font-family: Arial;
 }
 
+/* Default text block for all NON-home pages */
 .text-block {
-  position: absolute;
-  bottom: -950px;
   background-color: black;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+  position: relative;
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
+.text-block.home {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 9999;
+  opacity: 0.92;
+  border-radius: 0;
 }
