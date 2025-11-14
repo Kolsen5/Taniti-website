@@ -1,3 +1,4 @@
+
 * {
   font-family: "Times New Roman", Times, serif;
   margin: 0;
@@ -10,7 +11,7 @@ body.home {
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding-bottom: 120px; /* makes room for the fixed text block */
+  padding-bottom: 120px; /* space for fixed bottom text block */
 }
 
 body.restaurants {
@@ -24,15 +25,15 @@ body.restaurants {
 body {
   background-color: black;
   text-align: center;
+  overflow-x: hidden;
 }
 
 p {
   text-align: left;
   color: white;
-  font-size: 36px;
-  margin-right: 20px;
-  margin-left: 20px;
-  padding-left: 20px;
+  font-size: 28px;
+  margin: 20px;
+  line-height: 1.5;
 }
 
 h1 {
@@ -41,11 +42,9 @@ h1 {
   font-size: 48px;
   background-color: black;
   font-weight: bold;
-  margin: 0;
-  padding: 0;
+  padding: 10px 0;
   text-align: center;
 }
-
 
 .topnav {
   background-color: #333;
@@ -53,8 +52,9 @@ h1 {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 100%;
 }
 
 .topnav a {
@@ -63,7 +63,7 @@ h1 {
   padding: 14px 18px;
   text-decoration: none;
   font-size: 18px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: 0.3s;
 }
 
 .topnav a:hover {
@@ -76,7 +76,7 @@ h1 {
   color: white;
 }
 
-/* Mobile nav */
+/* Mobile navbar */
 @media screen and (max-width: 600px) {
   .topnav {
     flex-direction: column;
@@ -84,6 +84,7 @@ h1 {
 
   .topnav a {
     padding: 12px;
+    width: 100%;
     border-top: 1px solid #444;
   }
 }
@@ -94,7 +95,8 @@ h1 {
 }
 
 .search-bar input[type="text"] {
-  width: 300px;
+  width: 80%;
+  max-width: 300px;
   padding: 10px;
   border: 2px solid #04AA6D;
   border-radius: 25px;
@@ -124,27 +126,28 @@ h1 {
   background-color: #038e5c;
 }
 
-
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
   position: relative;
-  font-family: Arial;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
+/* Default text block (all pages except homepage) */
 .text-block {
   background-color: black;
   color: white;
   padding: 20px;
-  text-align: left;
   border-radius: 10px;
-  position: relative;
+  text-align: left;
   margin: 30px auto;
   max-width: 1200px;
+  position: relative;
 }
 
+/* Homepage bottom fixed text block */
 .text-block.home {
   position: fixed;
   bottom: 0;
@@ -154,8 +157,30 @@ h1 {
   max-width: 1200px;
   background-color: black;
   color: white;
-  padding: 20px;
-  text-align: center; 
+  padding: 15px 20px;
+  text-align: center;
   z-index: 9999;
   opacity: 0.92;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 22px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .text-block {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .text-block.home {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
 }
