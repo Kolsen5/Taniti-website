@@ -6,66 +6,78 @@
   <title>Taniti Website</title>
   <link rel="stylesheet" href="index.css" type="text/css">
 </head>
-<body class = "home">
+
+<body class="home">
   <h1>Welcome to Taniti</h1>
 
-<nav class="topnav">
+  <nav class="topnav">
     <a href="index.html" class="active">Home</a>
     <a href="transportation.html">Transportation</a>
     <a href="lodgings.html">Lodgings</a>
-    <a href="grocery-stores.html" >Grocery Stores</a>
+    <a href="grocery-stores.html">Grocery Stores</a>
     <a href="restaurants.html">Restaurants</a>
     <a href="entertainment.html">Entertainment</a>
     <a href="faq.html">FAQ</a>
   </nav>
-<div class="search-bar">
-  <form id="searchForm" action="Search.html" method="GET">
-    <input type="text" name="q" placeholder="Search" required>
-    <button type="submit">Search</button>
-  </form>
-</div>
 
-<button type="button">Book Now!</button>
-<div id="bookingPopup" class="popup">
-  <div class="popup-content">
-    <span id="closePopup" class="close">&times;</span>
-
-    <h2>Book Your Stay</h2>
-
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
-
-      <label for="dates">Travel Dates:</label>
-      <input type="text" id="dates" placeholder="MM/DD - MM/DD" required>
-
-      <button type="submit">Submit</button>
+  <div class="search-bar">
+    <form id="searchForm" action="Search.html" method="GET">
+      <input type="text" name="q" placeholder="Search" required>
+      <button type="submit">Search</button>
     </form>
   </div>
-</div>
 
-<div class ="container">
-	<div class ="text-block home">
-	<p>Taniti is a small, tropical island in the Pacific. While the island has an area of less than 500 square miles, the terrain is varied and includes both sandy and rocky beaches, a small but safe harbor, lush tropical rainforests, and a mountainous interior that includes a small, active volcano. Taniti has an indigenous population of about 20,000. Until a recent increase in tourism, most the Tanitian economy was dominated by fishing or agriculture.</p>
-	 </div>
-	</div>
-	<br>
-	<br>
-<script>
-  const openBtn = document.querySelector("button[type='button']");
-  const popup = document.getElementById("bookingPopup");
-  const closeBtn = document.getElementById("closePopup");
+  <button type="button">Book Now!</button>
 
-  openBtn.onclick = () => popup.style.display = "flex";
-  closeBtn.onclick = () => popup.style.display = "none";
+  <div id="bookingPopup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close">&times;</span>
 
-  // close popup if clicking outside the form
-  window.onclick = (e) => {
-    if (e.target === popup) popup.style.display = "none";
-  };
-</script>
+      <h2>Book Your Stay</h2>
+
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="dates">Travel Dates:</label>
+        <input type="text" id="dates" placeholder="MM/DD - MM/DD" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-block home">
+      <p>
+        Taniti is a small, tropical island in the Pacific. While the island has an area 
+        of less than 500 square miles, the terrain is varied and includes both sandy 
+        and rocky beaches, a small but safe harbor, lush tropical rainforests, and a 
+        mountainous interior that includes a small, active volcano. Taniti has an 
+        indigenous population of about 20,000. Until a recent increase in tourism, 
+        most of the Tanitian economy was dominated by fishing or agriculture.
+      </p>
+    </div>
+  </div>
+
+  <br><br>
+
+  <script>
+    const openBtn = document.querySelector("button[type='button']");
+    const popup = document.getElementById("bookingPopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    openBtn.onclick = () => popup.style.display = "flex";
+    closeBtn.onclick = () => popup.style.display = "none";
+
+    // Close popup when clicking outside
+    window.onclick = (e) => {
+      if (e.target === popup) popup.style.display = "none";
+    };
+  </script>
+
 </body>
 </html>
