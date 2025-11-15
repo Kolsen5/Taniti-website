@@ -54,5 +54,18 @@
 	</div>
 	<br>
 	<br>
+<script>
+  const openBtn = document.querySelector("button[type='button']");
+  const popup = document.getElementById("bookingPopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  openBtn.onclick = () => popup.style.display = "flex";
+  closeBtn.onclick = () => popup.style.display = "none";
+
+  // close popup if clicking outside the form
+  window.onclick = (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  };
+</script>
 </body>
 </html>
